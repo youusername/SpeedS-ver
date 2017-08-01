@@ -105,6 +105,7 @@
 		60FF26621749396E005F8435 /* Description.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60FF26611749396E005F8435 /* Description.plist */; };
 		60FF26651749396E005F8435 /* Description.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60FF26631749396E005F8435 /* Description.strings */; };
 		60FF26671749396E005F8435 /* CRTModeFilterKernel.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = 60FF26661749396E005F8435 /* CRTModeFilterKernel.cikernel */; };
+		6104C6B31F2F22FB00849825 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6104C6B21F2F22FB00849825 /* QuickLook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +191,7 @@
 		60FF26641749396E005F8435 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Description.strings; sourceTree = "<group>"; };
 		60FF26661749396E005F8435 /* CRTModeFilterKernel.cikernel */ = {isa = PBXFileReference; lastKnownFileType = text; path = CRTModeFilterKernel.cikernel; sourceTree = "<group>"; };
 		60FF26681749396E005F8435 /* CRTMode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CRTMode-Prefix.pch"; sourceTree = "<group>"; };
+		6104C6B21F2F22FB00849825 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6104C6B31F2F22FB00849825 /* QuickLook.framework in Frameworks */,
 				6000EF4B1748C39A0094C088 /* CoreMedia.framework in Frameworks */,
 				60808ADC1742F47B00376502 /* AVFoundation.framework in Frameworks */,
 				60E26D9E173E454B00DF7CED /* Quartz.framework in Frameworks */,
@@ -284,6 +287,7 @@
 		60B0D0E317380C14000DA458 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6104C6B21F2F22FB00849825 /* QuickLook.framework */,
 				6000EF491748C3860094C088 /* CoreMedia.framework */,
 				60808ADB1742F47B00376502 /* AVFoundation.framework */,
 				60E26D9A173E454500DF7CED /* Quartz.framework */,
@@ -749,7 +753,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.11;
 			};
 			name = Debug;
 		};
@@ -775,7 +779,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.11;
 			};
 			name = Release;
 		};
