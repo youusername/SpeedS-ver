@@ -246,24 +246,24 @@ static NSString *AvailabilitiesDefault = @"AvailabilitiesDefault";
 }
 
 - (IBAction)githubTapped:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/orta/"]];
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://github.com/youusername/"]];
 }
 
 - (IBAction)twitterTapped:(id)sender {
 
-    if (_installedTweetbot) {
-        NSTask *task = [[NSTask alloc] init];
-        [task setLaunchPath: @"/usr/bin/open"];
-        [task setArguments:@[ @"tweetbot://orta/user_profile/orta"]];
-        [task launch];
-
-    } else {
-        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://twitter.com/orta/"]];
-    }
+//    if (_installedTweetbot) {
+//        NSTask *task = [[NSTask alloc] init];
+//        [task setLaunchPath: @"/usr/bin/open"];
+//        [task setArguments:@[ @"tweetbot://orta/user_profile/orta"]];
+//        [task launch];
+//
+//    } else {
+        [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://weibo.com/u/2689574923/"]];
+//    }
 }
 
 - (IBAction)ortaTapped:(id)sender {
-    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://orta.github.io/"]];
+//    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://orta.github.io/"]];
 }
 
 

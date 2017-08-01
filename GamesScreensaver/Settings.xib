@@ -1,20 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4471.1" systemVersion="13A510d" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16D30" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4471.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ScreenSaverConfig">
             <connections>
-                <action selector="aboutTapped:" destination="112" id="138"/>
-                <action selector="exit:" destination="26" id="71"/>
-                <action selector="githubTapped:" destination="127" id="131"/>
-                <action selector="muteTapped:" destination="141" id="144"/>
-                <action selector="ortaTapped:" destination="135" id="137"/>
-                <action selector="qualityChanged:" destination="92" id="104"/>
-                <action selector="skipClicked:" destination="gj7-uh-aYh" id="DZD-Aa-pu5"/>
-                <action selector="streamVideoTapped:" destination="145" id="149"/>
-                <action selector="twitterTapped:" destination="129" id="132"/>
                 <outlet property="_aboutView" destination="116" id="133"/>
                 <outlet property="_configureSheet" destination="1" id="55"/>
                 <outlet property="_muteCheckBox" destination="141" id="143"/>
@@ -26,8 +18,8 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="1">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="260" height="402"/>
@@ -39,21 +31,27 @@
                     <button verticalHuggingPriority="750" id="26">
                         <rect key="frame" x="108" y="13" width="130" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                        <buttonCell key="cell" type="push" title="Close Settings" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="27">
+                        <buttonCell key="cell" type="push" title="关闭设置" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="27">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
 Gw
 </string>
                         </buttonCell>
+                        <connections>
+                            <action selector="exit:" target="-2" id="71"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="112">
                         <rect key="frame" x="14" y="13" width="92" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                        <buttonCell key="cell" type="push" title="About" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="113">
+                        <buttonCell key="cell" type="push" title="关于" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="113">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="aboutTapped:" target="-2" id="138"/>
+                        </connections>
                     </button>
                     <customView wantsLayer="YES" id="115">
                         <rect key="frame" x="0.0" y="55" width="260" height="347"/>
@@ -63,7 +61,7 @@ Gw
                                 <rect key="frame" x="20" y="134" width="220" height="168"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" id="hI6-zz-3f9">
-                                    <rect key="frame" x="0.0" y="17" width="220" height="151"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="168"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="82" id="80">
@@ -106,11 +104,11 @@ Gw
                                     </subviews>
                                     <color key="backgroundColor" red="0.92941182850000004" green="0.92941182850000004" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
                                 </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" id="81">
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="81">
                                     <rect key="frame" x="0.0" y="177" width="212" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" id="83">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="83">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -122,12 +120,12 @@ Gw
                             <popUpButton verticalHuggingPriority="750" id="91">
                                 <rect key="frame" x="22" y="72" width="217" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="1080p" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="92">
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="92">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" title="OtherViews" id="93">
                                         <items>
-                                            <menuItem title="1080p" state="on" id="94">
+                                            <menuItem title="1080p" id="94">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                             <menuItem title="720p" tag="1" id="95"/>
@@ -136,9 +134,12 @@ Gw
                                             <menuItem title="Low" tag="4" id="100"/>
                                         </items>
                                     </menu>
+                                    <connections>
+                                        <action selector="qualityChanged:" target="-2" id="104"/>
+                                    </connections>
                                 </popUpButtonCell>
                             </popUpButton>
-                            <textField verticalHuggingPriority="750" id="97">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="97">
                                 <rect key="frame" x="17" y="104" width="172" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Limit downloads to quality" id="98">
@@ -147,7 +148,7 @@ Gw
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" id="68">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="68">
                                 <rect key="frame" x="17" y="310" width="107" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Platforms to use" id="69">
@@ -163,6 +164,9 @@ Gw
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="muteTapped:" target="-2" id="144"/>
+                                </connections>
                             </button>
                             <button id="145">
                                 <rect key="frame" x="18" y="16" width="117" height="18"/>
@@ -171,14 +175,20 @@ Gw
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="streamVideoTapped:" target="-2" id="149"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" id="gj7-uh-aYh">
                                 <rect key="frame" x="180" y="14" width="60" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="Skip" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="72W-Sg-VjZ">
+                                <buttonCell key="cell" type="roundRect" title="切换" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="72W-Sg-VjZ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="controlContent"/>
+                                    <font key="font" metaFont="cellTitle"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="skipClicked:" target="-2" id="DZD-Aa-pu5"/>
+                                </connections>
                             </button>
                         </subviews>
                     </customView>
@@ -186,14 +196,14 @@ Gw
                         <rect key="frame" x="259" y="55" width="260" height="347"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="125">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" allowsCharacterPickerTouchBarItem="NO" id="125">
                                 <rect key="frame" x="133" y="239" width="110" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="126">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Orta made this.
+                                    <string key="title">兴趣使然.
 
-Now everyone can complete videogames.</string>
+现在你可以把屏幕保护设置成你喜欢的英雄.</string>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -205,6 +215,9 @@ Now everyone can complete videogames.</string>
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="githubTapped:" target="-2" id="131"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" id="129">
                                 <rect key="frame" x="152" y="43" width="88" height="85"/>
@@ -213,6 +226,9 @@ Now everyone can complete videogames.</string>
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="smallSystemBold"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="twitterTapped:" target="-2" id="132"/>
+                                </connections>
                             </button>
                             <button id="135">
                                 <rect key="frame" x="29" y="238" width="88" height="88"/>
@@ -221,15 +237,18 @@ Now everyone can complete videogames.</string>
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="ortaTapped:" target="-2" id="137"/>
+                                </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" id="139">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" allowsCharacterPickerTouchBarItem="NO" id="139">
                                 <rect key="frame" x="25" y="135" width="218" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="140">
                                     <font key="font" metaFont="cellTitle"/>
-                                    <string key="title">This screensaver is open source, and uses DDProgressView, HCYoutubeParser &amp; AFNetworking.
+                                    <string key="title">修改至 orta/SpeedS-ver.
 
-Keep building cool stuff.</string>
+并非原创.</string>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -243,6 +262,6 @@ Keep building cool stuff.</string>
     <resources>
         <image name="github_icon_black" width="66" height="80"/>
         <image name="orta" width="88" height="88"/>
-        <image name="twitter_black" width="64" height="80"/>
+        <image name="twitter_black" width="66" height="66"/>
     </resources>
 </document>
