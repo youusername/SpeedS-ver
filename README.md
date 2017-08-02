@@ -30,13 +30,13 @@
 编译
 
 
-==MacOS Sierra 10.12==系统会报 QuickTime/QuickTime.h: file not found
+MacOS Sierra 10.12系统会报 QuickTime/QuickTime.h: file not found
 
 解决方法：[QuickTime/QuickTime.h: file not found](https://forum.openframeworks.cc/t/quicktime-quicktime-h-file-not-found/24494)
 
 
 修改
 
-可以自行修改项目内的==metadata.json==文件修改为你自己的专属屏保
+可以自行修改项目内的metadata.json文件修改为你自己的专属屏保
 
 
